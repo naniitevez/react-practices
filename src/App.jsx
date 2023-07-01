@@ -25,7 +25,7 @@ function App() {
       {imagesView === GALLERY ? (
         <>
           <h1 className="title">Gallery</h1>
-          <section className="container">
+          <section className="gallery_container">
             <figure className="image_container">
               <img
                 src="https://picsum.photos/id/10/1200/1200"
@@ -101,17 +101,21 @@ function App() {
           </section>
         </>
       ) : (
-        <section className="full_picture_container">
-          <button className="close" onClick={handleClick}>
-            X
-          </button>
-          <img
-            src={imageSelected}
-            alt=""
-            width={600}
-            onClick={handleClick}
-            style={{ viewTransitionName: transitionName }}
-          />
+        <section className="full_picture_container" onClick={handleClick}>
+          <figure
+            className="full_picture"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button className="close" onClick={handleClick}>
+              X
+            </button>
+            <img
+              src={imageSelected}
+              alt=""
+              width={600}
+              style={{ viewTransitionName: transitionName }}
+            />
+          </figure>
         </section>
       )}
     </>

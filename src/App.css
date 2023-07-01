@@ -7,7 +7,7 @@ h1.title {
   margin-top: 3rem;
 }
 
-section.container {
+section.gallery_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px;
@@ -15,12 +15,19 @@ section.container {
 }
 
 section.full_picture_container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+figure.full_picture {
   display: grid;
   width: 600px;
   margin: 0 auto;
 }
 
-section.full_picture_container img {
+figure.full_picture img {
   justify-self: center;
 }
 
