@@ -1,0 +1,41 @@
+#root {
+  width: 100vw;
+}
+
+h1.title {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+section.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  margin-top: 6rem;
+}
+
+section.full_picture_container {
+  display: grid;
+  width: 600px;
+  margin: 0 auto;
+}
+
+section.full_picture_container img {
+  justify-self: center;
+}
+
+figure.image_container {
+  display: flex;
+  justify-content: center;
+}
+
+button.close {
+  position: absolute;
+  z-index: 10;
+  justify-self: end;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+}
