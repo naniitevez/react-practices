@@ -1,48 +1,14 @@
-#root {
+#app {
   width: 100vw;
-}
-
-h1.title {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-section.gallery_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 10px;
-  margin-top: 6rem;
-}
-
-section.full_picture_container {
   height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-figure.full_picture {
-  display: grid;
-  width: 600px;
-  margin: 0 auto;
-}
-
-figure.full_picture img {
-  justify-self: center;
-}
-
-figure.image_container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-button.close {
-  position: absolute;
-  z-index: 10;
-  justify-self: end;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  font-size: 22px;
+#app button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
