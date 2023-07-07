@@ -1,0 +1,106 @@
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+header {
+  padding: 2rem 4rem;
+}
+
+header div {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#gallery-page,
+#library-page {
+  width: 100vw;
+  height: 100vh;
+
+  & h1.title {
+    text-align: center;
+    margin-top: 3rem;
+
+    & span {
+      display: block;
+      font-size: 66px;
+      margin-top: -30px;
+    }
+  }
+
+  & .gallery_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    margin-top: 6rem;
+
+    &.image_container {
+      display: flex;
+      justify-content: center;
+
+      & img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .full_picture_container {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    & .full_picture {
+      display: grid;
+      width: 600px;
+      margin: 0 auto;
+
+      & img {
+        justify-self: center;
+      }
+
+      & .close {
+        position: absolute;
+        z-index: 10;
+        justify-self: end;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .library_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 3rem;
+
+    & .book_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      margin: 0;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

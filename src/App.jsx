@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const navigate = useNavigate();
@@ -7,6 +7,7 @@ function App() {
   return (
     <div id="app">
       <button onClick={() => navigate("/gallery")}>Galería</button>
+      <button onClick={() => navigate("/library")}>Biblioteca</button>
     </div>
   );
 }

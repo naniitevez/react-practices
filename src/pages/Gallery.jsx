@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { flushSync } from "react-dom";
-import { useNavigate } from "react-router-dom";
-import "../styles/Gallery.scss";
+import "../App.scss";
+import GoHome from "../components/GoHome";
 
 const GALLERY = "gallery";
 const FULL = "full";
@@ -10,8 +10,6 @@ const Gallery = () => {
   const [imagesView, setImagesView] = useState(GALLERY);
   const [transitionName, setTransitionName] = useState("");
   const [imageSelected, setImageSelected] = useState("");
-
-  const navigate = useNavigate();
 
   function handleClick(e) {
     document.startViewTransition(() =>
@@ -25,9 +23,7 @@ const Gallery = () => {
 
   return (
     <div id="gallery-page">
-      <header>
-        <div onClick={() => navigate("/")}>Ir al inicio</div>
-      </header>
+      <GoHome />
       {imagesView === GALLERY ? (
         <>
           <h1 className="title">Gallery</h1>
