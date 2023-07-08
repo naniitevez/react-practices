@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Gallery from "./pages/Gallery.jsx";
 import Library from "./pages/Library.jsx";
+import Book from "./pages/Book.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/library",
     element: <Library />,
+  },
+  {
+    path: "/book/:bookId",
+    element: <Book />,
   },
 ]);
 

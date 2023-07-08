@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { flushSync } from "react-dom";
 import "../App.scss";
-import GoHome from "../components/GoHome";
+import GoBack from "../components/GoBack";
 
 const GALLERY = "gallery";
 const FULL = "full";
@@ -23,7 +23,7 @@ const Gallery = () => {
 
   return (
     <div id="gallery-page">
-      <GoHome />
+      <GoBack />
       {imagesView === GALLERY ? (
         <>
           <h1 className="title">Gallery</h1>

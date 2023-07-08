@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const GoHome = () => {
+const GoBack = () => {
   const navigate = useNavigate();
 
   return (
     <header>
-      <div onClick={() => navigate("/")}>Ir al inicio</div>
+      <div onClick={() => navigate(-1)}>Ir al inicio</div>
     </header>
   );
 };
 
-export default GoHome;
+export default GoBack;
