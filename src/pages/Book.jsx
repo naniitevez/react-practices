@@ -12,7 +12,7 @@ const Book = () => {
       <GoBack />
       <h1 className="title">{book.title}</h1>
       <section className="book_container">
-        <figure className="image_container">
+        <figure className="image_container" style={{ viewTransitionName: `book-${book.id}` }}>
           <img src={book.cover} alt="" />
         </figure>
         <p>{book.description}</p>

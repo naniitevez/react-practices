@@ -4,12 +4,20 @@ import GoBack from "../components/GoBack";
 import Book from "../components/Book";
 import books from "../data/books";
 import "../App.scss";
+import { flushSync } from "react-dom";
 
 const Library = () => {
   const navigate = useNavigate();
 
   const handleRedirect = (link) => {
-    navigate(`/book/${link}`);
+    if (!document.startViewTransition) {
+      navigate(`/book/${link}`);
+      return;
+    }
+
+    document.startViewTransition(() =>
+      flushSync(() => navigate(`/book/${link}`))
+    );
   };
 
   return (
@@ -20,13 +28,13 @@ const Library = () => {
           RECOMENDED <span>BOOKS</span>
         </h1>
         <section className="library_container">
-          {books?.map((book, index) => (
+          {books?.map((book) => (
             <Book
               handleClick={handleRedirect}
               img={book.cover}
               id={book.id}
               title={book.title}
-              key={index}
+              key={book.id}
             />
           ))}
         </section>

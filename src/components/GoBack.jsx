@@ -6,7 +6,7 @@ const GoBack = () => {
 
   return (
     <header>
-      <div onClick={() => navigate(-1)}>Ir al inicio</div>
+      <div onClick={() => navigate(-1)}>Ir atrás</div>
     </header>
   );
 };
